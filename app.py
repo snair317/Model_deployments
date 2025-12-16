@@ -18,6 +18,6 @@ distance_city_km = st.number_input("Distance from City (KM)", min_value=0.1,max_
 #predict
 
 if st.button("Predict Price"):
-  X=np.array([["area_sqft","bedrooms","bathrooms","age_years","distance_city_km"]])
+  X=np.array([[area_sqft,bedrooms,bathrooms,age_years,distance_city_km]])
   pred=model.predict(X)[0]
   st.success(f"Estimated Price: {pred:.2f} lakhs")
